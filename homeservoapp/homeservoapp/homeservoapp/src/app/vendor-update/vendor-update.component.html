@@ -1,0 +1,40 @@
+
+<div id="vendor-update">
+    <form (ngSubmit)="onSubmit()" action="/vendor-update">
+      <p class="heading">Update Your Details</p>
+  
+
+      <div class="inputContainer">
+        <input placeholder="Id" id="vendorId" class="inputField" type="number" [(ngModel)]="vendorId" required name="vendorId">
+      </div>
+
+      <div class="inputContainer">
+        <input placeholder="Name" id="name" class="inputField" type="text" [(ngModel)]="name" required name="name">
+      </div>
+  
+      <div class="inputContainer">
+        <input placeholder="Email" id="email" class="inputField" type="email" [(ngModel)]="email" required name="email">
+      </div>
+
+      <div class="inputContainer">
+        <input placeholder="Phone Number" id="phone" class="inputField" type="tel" [(ngModel)]="phoneNumber" required name="phoneNumber">
+      </div>
+  
+      <div class="inputContainer">
+        <input placeholder="Password" id="password" class="inputField" type="password" [(ngModel)]="password" required name="password">
+      </div>
+  
+      <div class="inputContainer">
+        <input placeholder="role" id="role" class="inputField" type="inputField" [(ngModel)]="role" required name="role">
+      </div>
+      
+      <div class="inputContainer">
+        <input placeholder="costPerDay" id="costPerDay" class="inputField" type="number" [(ngModel)]="costPerDay" required name="costPerDay">
+      </div>
+
+       <!-- Add more input fields for other details you want to update  -->
+  
+      <button type="submit" routerLink = "/vendor-home"> Update</button>
+    </form>
+  </div>
+   

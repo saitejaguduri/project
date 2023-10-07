@@ -1,0 +1,61 @@
+/* Add Font Awesome styles to the icon */
+#back i.fa-backward {
+    font-size: 24px; /* Adjust the size as needed */
+    vertical-align: middle;
+    margin-right: 10px; /* Add spacing between the icon and the text */
+  }
+  
+  /* Style the "BACK" button */
+  #back button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  #back button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Style the container for vendor details */
+  #detailsContainer {
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px; /* Adjust the maximum width as needed */
+    margin: 0 auto; /* Center the container horizontally */
+    text-align: left; /* Align text to the left */
+  }
+  
+  /* Style the heading */
+  #venhead {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  /* Style the details */
+  #detailsContainer p {
+    margin-bottom: 10px;
+  }
+  
+  /* Style the strong tags */
+  #detailsContainer strong {
+    font-weight: bold;
+  }
+  
+  /* Style the spans */
+  #detailsContainer span {
+    color: #007bff; /* Change the color as needed */
+  }
+  
+  /* Center the "BACK" button and the icon */
+  #back {
+    text-align: center;
+  }
+  

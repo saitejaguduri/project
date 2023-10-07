@@ -1,0 +1,80 @@
+.page-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: rgba(12, 146, 163, 0.45);
+  }
+  
+  #headcontent {
+    margin-top: 20px;
+  }
+  
+  .button-container {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #3498db;
+    border: none;
+    border-radius: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .button:hover {
+    background-color: #2980b9;
+  }
+  
+  #detailsContainer {
+    /* Container styles */
+    border: 1px solid;
+    border-radius: 10px;
+    background-color: #eee596;
+    width: 600px;
+    height: 250px;
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px;
+    font-size: 18px;
+  }
+  
+  #listofworks {
+    /* List of Works styles */
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  #listcontent {
+    border-radius: 15px;
+    border: 2px solid;
+    height: 40px;
+    padding-top: 12px;
+    background-color: black;
+    color: white;
+  }
+  
+  #vendorDetails {
+    /* Vendor Details styles */
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  #listcontent1 {
+    border-radius: 15px;
+    height: 40px;
+    padding-top: 12px;
+    background-color: black;
+    color: white;
+  }
+  
+  /* Add any other styles as needed */
+  

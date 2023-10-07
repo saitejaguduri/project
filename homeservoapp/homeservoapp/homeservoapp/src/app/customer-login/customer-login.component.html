@@ -1,0 +1,32 @@
+<div id="main_div">
+  <form class="form_main" (ngSubmit)="onSubmit()" action="/submit-form">
+    <p class="heading">Customer Login</p>
+    <div class="inputContainer">
+      <svg viewBox="0 0 16 16" fill="#2e2e2e" height="16" width="16" xmlns="http://www.w3.org/2000/svg" class="inputIcon">
+        <!-- Email icon SVG code -->
+      </svg>
+      <input placeholder="Email" id="email" class="inputField" type="text" [(ngModel)]="email" required name="email">
+    </div>
+    <p class="field" *ngIf="email === ''">Email should not be empty</p>
+    <p class="valid" *ngIf="email !== '' && !emailIsValid()">Email is invalid, please check it</p>
+
+    <div class="inputContainer">
+      <svg viewBox="0 0 16 16" fill="#2e2e2e" height="16" width="16" xmlns="http://www.w3.org/2000/svg" class="inputIcon">
+        <!-- Password icon SVG code -->
+      </svg>
+      <input placeholder="Password" id="password" class="inputField" type="password" [(ngModel)]="password" required name="password">
+    </div>
+    <p class="field" *ngIf="password === ''">Password should not be empty</p>
+    <p class="valid" *ngIf="password !== '' && !passwordIsValid()">Password is not valid, please check it</p>
+
+    <button type="submit">Submit</button>
+
+    <!-- Display error message when loginError is true -->
+    <p class="error-message" *ngIf="loginError">Invalid credentials, please try again.</p>
+
+    <div class="signupContainer">
+      <p>Don't have an account?</p>
+      <a routerLink="/customer-register">Sign up</a>
+    </div>
+  </form>
+</div>

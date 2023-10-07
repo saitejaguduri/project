@@ -1,0 +1,219 @@
+<div class="container">
+  <div class="title">Customer Sign up</div>
+  <div class="content">
+    <form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
+      <!-- Name and Email in one line -->
+      <div class="input-pair">
+        <div class="input-box">
+          <span class="details">Name</span>
+          <input
+            type="text"
+            class="inputcolor"
+            id="cname"
+            placeholder="Enter your name"
+            formControlName="name"
+          />
+          <div
+            *ngIf="registrationForm.get('name')?.hasError('required') && registrationForm.get('name')?.touched"
+            class="error"
+          >
+            Name is required.
+          </div>
+        </div>
+        <div class="input-box">
+          <span class="details">Email</span>
+          <input
+            type="email"
+            class="inputcolor"
+            id="email"
+            placeholder="Enter your Email"
+            formControlName="email"
+          />
+          <div
+            *ngIf="registrationForm.get('email')?.hasError('required') && registrationForm.get('email')?.touched"
+            class="error"
+          >
+            Email is required.
+          </div>
+          <div
+            *ngIf="registrationForm.get('email')?.hasError('email') && registrationForm.get('email')?.touched"
+            class="error"
+          >
+            Invalid email format.
+          </div>
+        </div>
+      </div>
+
+      <!-- Phone and Password in one line -->
+      <div class="input-pair">
+        <div class="input-box">
+          <span class="details">Phone</span>
+          <input
+            type="tel"
+            class="inputcolor"
+            id="phone"
+            placeholder="Enter your phone"
+            formControlName="phone"
+          />
+          <div
+            *ngIf="registrationForm.get('phone')?.hasError('pattern') && registrationForm.get('phone')?.touched"
+            class="error"
+          >
+            Phone number must be 10 digits.
+          </div>
+        </div>
+        <div class="input-box">
+          <span class="details">Password</span>
+          <input
+            type="password"
+            class="inputcolor"
+            id="password"
+            placeholder="Enter your password"
+            formControlName="password"
+          />
+          <div
+            *ngIf="registrationForm.get('password')?.hasError('required') && registrationForm.get('password')?.touched"
+            class="error"
+          >
+            Password is required.
+          </div>
+          <div
+            *ngIf="registrationForm.get('password')?.hasError('minlength') && registrationForm.get('password')?.touched"
+            class="error"
+          >
+            Password must be at least 8 characters long.
+          </div>
+          <div
+            *ngIf="registrationForm.get('password')?.hasError('pattern') && registrationForm.get('password')?.touched"
+            class="error"
+          >
+            Password must contain at least one uppercase letter, one digit, and one special character.
+          </div>
+        </div>
+      </div>
+
+      <!-- Family Count Input -->
+      <div class="input-pair">
+        <div class="input-box">
+          <span class="details">Family-count</span>
+          <input
+            type="number"
+            class="inputcolor"
+            id="familycount"
+            placeholder="Enter your family count"
+            formControlName="familyCount"
+          />
+          <div
+            *ngIf="registrationForm.get('familyCount')?.hasError('min') && registrationForm.get('familyCount')?.touched"
+            class="error"
+          >
+            Family count cannot be negative.
+          </div>
+        </div>
+      </div>
+
+      <!-- Address Section in paired format -->
+      <div class="title">Address</div>
+      <div class="input-pair">
+        <div class="input-box">
+          <span class="details">Door Number</span>
+          <input
+            type="text"
+            class="inputcolor"
+            id="doornumber"
+            placeholder="Enter your Door number"
+            formControlName="doorNumber"
+          />
+        </div>
+        <div class="input-box">
+          <span class="details">Street</span>
+          <input
+            type="text"
+            class="inputcolor"
+            id="street"
+            placeholder="Enter your street"
+            formControlName="street"
+          />
+        </div>
+      </div>
+      <div class="input-pair">
+        <div class="input-box">
+          <span class="details">Land Mark</span>
+          <input
+            type="text"
+            class="inputcolor"
+            id="landmark"
+            placeholder="Enter your landmark"
+            formControlName="landmark"
+          />
+        </div>
+        <div class="input-box">
+          <span class="details">District</span>
+          <input
+            type="text"
+            class="inputcolor"
+            id="district"
+            placeholder="Enter your district"
+            formControlName="district"
+          />
+          <div
+            *ngIf="registrationForm.get('district')?.hasError('required') && registrationForm.get('district')?.touched"
+            class="error"
+          >
+            District is required.
+          </div>
+        </div>
+      </div>
+      <div class="input-pair">
+        <div class="input-box">
+          <span class="details">State</span>
+          <input
+            type="text"
+            class="inputcolor"
+            id="state"
+            placeholder="Enter your state"
+            formControlName="state"
+          />
+          <div
+            *ngIf="registrationForm.get('state')?.hasError('required') && registrationForm.get('state')?.touched"
+            class="error"
+          >
+            State is required.
+          </div>
+        </div>
+        <div class="input-box">
+          <span class="details">Pin Code</span>
+          <input
+            type="tel"
+            class="inputcolor"
+            id="pincode"
+            placeholder="Enter your pincode"
+            formControlName="pincode"
+          />
+          <div
+            *ngIf="registrationForm.get('pincode')?.hasError('required') && registrationForm.get('pincode')?.touched"
+            class="error"
+          >
+            Pin Code is required.
+          </div>
+        </div>
+      </div>
+
+      <div class="button">
+        <button type="submit">Sign up</button>
+      </div>
+      <div *ngIf="registrationSuccess" class="success">
+        Data saved successfully.
+      </div>
+      <div *ngIf="registrationError" class="error">
+        {{ registrationError }}
+      </div>
+    
+    <!-- Already registered link -->
+    <div class="already-registered">
+      Already registered? Click to  <button><a routerLink="/customer-login">login</a></button>
+    </div>
+  </form>
+    
+  </div>
+</div>

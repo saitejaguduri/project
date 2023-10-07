@@ -1,0 +1,37 @@
+
+<div id="customer-update">
+    <form (ngSubmit)="onSubmit()" >  <!-- action="/customer-update"-->
+      <p class="heading">Update Your Details</p>
+  
+
+      <div class="inputContainer">
+        <input placeholder="Id" id="customerId" class="inputField" type="number" [(ngModel)]="customerId" required name="customerId">
+      </div>
+
+      <div class="inputContainer">
+        <input placeholder="Name" id="name" class="inputField" type="text" [(ngModel)]="name" required name="name">
+      </div>
+  
+      <div class="inputContainer">
+        <input placeholder="Email" id="email" class="inputField" type="email" [(ngModel)]="email" required name="email">
+      </div>
+
+      <div class="inputContainer">
+        <input placeholder="Phone Number" id="phone" class="inputField" type="tel" [(ngModel)]="phoneNumber" required name="phoneNumber">
+      </div>
+  
+      <div class="inputContainer">
+        <input placeholder="Password" id="password" class="inputField" type="password" [(ngModel)]="password" required name="password">
+      </div>
+  
+      <div class="inputContainer">
+        <input placeholder="Family Count" id="familyCount" class="inputField" type="number" [(ngModel)]="familyCount" required name="familyCount">
+      </div>
+
+
+       <!-- Add more input fields for other details you want to update  -->
+  
+      <button type="submit" > Update</button>
+    </form>
+  </div>
+   
